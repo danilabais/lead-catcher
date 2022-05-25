@@ -4,6 +4,9 @@
 @import 'libs';
 @import 'global';
 
+.overflow-hidden {
+    overflow: hidden;
+}
 
 body {
     //Самый частый шрифт
@@ -14,9 +17,18 @@ body {
 }
 
 
+
 .header {
     background: #333;
     margin-bottom: 30px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    &__heigth {
+        height: 69px;
+        margin-bottom: 20px;
+        visibility: hidden;
+    }
     &__wrap  {
         display: flex;
         justify-content: space-between;
@@ -63,9 +75,24 @@ body {
 }
 
 
+.modal__trigger {
+    background: red;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 4px;
+    z-index: 2;
+    opacity: 0;
+    
 
+}
 
 .lead-catcher {
+    &.show {
+        visibility: hidden;
+        opacity: 0;
+    }
     position: fixed;
     left: 0;
     top: 0;
@@ -107,8 +134,7 @@ body {
         color: $blue;
     }
 
-    &__main {
-    }
+
     &__woman {
         position: relative;
         top: -25px;

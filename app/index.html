@@ -10,8 +10,9 @@
 
 <body>
 
-  <div class="lead-catcher">
-    <div class="lead-catcher__window">
+  <div id="modal__trigger" class="modal__trigger"></div>
+  <div id="modal" class="lead-catcher show">
+    <div id="modalWindow" class="lead-catcher__window">
       <div class="lead-catcher__header container">
         <div class="lead-catcher__header-title">
           Feedback form
@@ -27,6 +28,10 @@
           <div class="lead-catcher__name">
             <label class="lead-catcher__name-label" for="name">Your name</label>
             <input class="lead-catcher__name-input" placeholder="Name" type="text" id="name" name="name"> 
+          </div>
+          <div class="lead-catcher__name">
+            <label class="lead-catcher__name-label" for="tel">Your phone</label>
+            <input class="lead-catcher__name-input" placeholder="Phone" type="tel" id="tel" name="tel"> 
           </div>
           <div class="lead-catcher__ta">
             <label class=" lead-catcher__name-label" for="ta">Your question</label>
@@ -51,6 +56,7 @@
       </ul>
     </div>
   </header>
+  <div class="header__heigth"></div>
 
 
 
@@ -69,6 +75,7 @@
         <p class="fish-text__text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nam autem voluptatibus aliquid? Eius possimus cumque velit quos eveniet eum, architecto fuga non porro expedita rerum exercitationem dignissimos, necessitatibus, voluptatem vel pariatur ipsum ab id qui nulla excepturi odit quis! Iure veritatis illum distinctio repellendus tempore quos aliquam deleniti numquam cumque? Ratione itaque accusantium, expedita commodi sunt, quia voluptatibus aut exercitationem, sit accusamus nostrum excepturi porro nihil labore soluta laboriosam maiores dolorem culpa illo odio? Reprehenderit nesciunt voluptatem aut aliquid excepturi facilis iste, vitae accusamus, quos, officia rerum voluptatum optio harum repudiandae! Vitae excepturi ipsam corporis perferendis odit, et tempore illo accusamus ea veritatis eaque repellendus optio aut commodi asperiores qui quo recusandae saepe sunt deleniti illum. Molestias repudiandae enim eligendi esse, dolores eius recusandae modi asperiores doloribus quia facere odit quam eaque. Et numquam rem reprehenderit dolore. Quae impedit, enim sit deserunt a magnam placeat deleniti eos incidunt magni repellendus dicta nisi expedita blanditiis sapiente quidem est eum unde aut ea rerum et velit? Obcaecati sapiente illum accusantium beatae et iste vitae corporis ullam corrupti, magnam quisquam debitis vero at, deleniti pariatur harum perferendis laborum eum! Vel, architecto provident consectetur consequatur ducimus cumque deleniti voluptate odit officiis sed quod modi reprehenderit. Commodi harum illo sit magni, architecto eos? A quam fuga excepturi, at corporis voluptate hic, dolor, voluptatem amet neque beatae? Quod recusandae numquam provident! Laboriosam itaque eius, magnam sed tenetur voluptate, minima dolor consectetur quibusdam dolore aut dolorum cupiditate facere iusto voluptas saepe libero et distinctio accusamus numquam natus quo? Labore, quidem, tempore earum distinctio eaque nam dolorem asperiores dolorum veniam nulla beatae dolores nihil esse ab veritatis accusamus rerum? Officia, illo fugiat ad eum vitae dignissimos odit quos optio? Fuga dolorem perferendis, suscipit natus eligendi eos optio vel tempora quod libero esse facilis accusantium vero hic ipsum.
         </p>
+        <button class="lead-catcher__submit" id="openModal">Открыть модалку</button>
       </section>
     </main>
     <footer class="footer">
