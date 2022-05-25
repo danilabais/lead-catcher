@@ -18,11 +18,11 @@ function startLeadCatcher (secondForStart)  {
     const openModal = () => {
         modal.classList.toggle('show')
         document.body.classList.add('overflow-hidden')
+        onceOpen=true
     }
     const triggerModal = () => {
         if (!onceOpen && timerBoolean) {
             openModal()
-            onceOpen=true
         } 
     }
     
