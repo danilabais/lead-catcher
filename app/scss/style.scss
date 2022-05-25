@@ -9,6 +9,7 @@ body {
     //Самый частый шрифт
     font-family: inter;
     font-weight: 500;
+    
     ////////////////////
 }
 
@@ -57,6 +58,119 @@ body {
         padding: 20px;
         &:hover {
             text-decoration: underline;
+        }
+    }
+}
+
+
+
+
+.lead-catcher {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(34, 34, 34, 0.384);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     .container {
+        max-width: 395px;
+    }   
+
+    &__window {
+        background: #fff;
+        max-width: 492px;    
+        box-shadow: 0px 12px 24px rgba(18, 38, 63, 0.05);
+        border-radius: 4px;
+    }
+
+    &__header {
+        background: url('../images/lead-catcher__bg.png');
+        background-position: right  bottom;
+        height: 112px;
+    }
+
+    &__header-title {
+        font-family: poppins;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+        color: $blue;
+        padding-top: 16px;
+        padding-bottom: 5px;
+    }
+
+    &__header-subtitle {
+        max-width: 60%;
+        color: $blue;
+    }
+
+    &__main {
+    }
+    &__woman {
+        position: relative;
+        top: -25px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+
+    }
+
+ 
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name-label {
+        font-family: poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 20px;
+        color: #495057;
+        margin-bottom: 4px;
+        
+    }
+
+    &__name-input {
+        margin-bottom: 20px;
+        padding: 10px;
+        outline: none;
+        border: 1px solid #495057;
+        border-radius: 4px;
+    }
+
+    &__ta {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    &__ta-ta {
+        margin-bottom: 20px;
+        resize: none;
+        height: 80px;
+    }
+
+    &__submit {
+        background: #556EE6;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        color: #fff;
+        width: 100%;
+        padding: 8px 0;
+        cursor: pointer;
+        transition: all .3s;
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 13px;
+        &:hover {
+            background: #304ddd;
         }
     }
 }
