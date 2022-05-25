@@ -39,6 +39,7 @@ body {
     a {
         color: #fff;
         margin: 10px;
+        transition: all .3s;
     }
 
     &__logo-link {
@@ -49,6 +50,7 @@ body {
     &__menu-link {
         &:hover {
             color: rgba(185, 185, 185, 0.856);
+            text-decoration: underline;
         }
     }
 }
@@ -75,7 +77,9 @@ body {
 }
 
 
-.modal__trigger {
+
+.modal {
+    &__trigger {
     background: red;
     position: fixed;
     top: 0;
@@ -84,8 +88,9 @@ body {
     height: 4px;
     z-index: 2;
     opacity: 0;
-    
+}
 
+    
 }
 
 .lead-catcher {
@@ -93,6 +98,17 @@ body {
         visibility: hidden;
         opacity: 0;
     }
+    &__close {
+        width: 26px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background: #fff;
+        padding: 3px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    transition: all .3s;
     position: fixed;
     left: 0;
     top: 0;
@@ -117,6 +133,7 @@ body {
         background: url('../images/lead-catcher__bg.png');
         background-position: right  bottom;
         height: 112px;
+        position: relative;
     }
 
     &__header-title {
