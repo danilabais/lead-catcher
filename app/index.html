@@ -28,15 +28,15 @@
         <form action="">
           <div class="lead-catcher__name">
             <label class="lead-catcher__name-label" for="name">Your name</label>
-            <input required class="lead-catcher__name-input" placeholder="Name" type="text" id="name" name="name"> 
+            <input  class="lead-catcher__name-input " placeholder="Name" type="text" data-required  name="name"> 
           </div>
           <div class="lead-catcher__name">
             <label class="lead-catcher__name-label" for="tel">Your phone</label>
-            <input required class="lead-catcher__name-input" placeholder="Phone" type="tel" id="tel" name="tel"> 
+            <input  id="phone" class="lead-catcher__name-input " placeholder="Phone" type="tel" data-required  name="tel"> 
           </div>
           <div class="lead-catcher__ta">
             <label class=" lead-catcher__name-label" for="ta">Your question</label>
-            <textarea  required class="lead-catcher__ta-ta lead-catcher__name-input" placeholder="Question" name="ta" id="ta" cols="30" rows="10"></textarea>
+            <textarea   class="lead-catcher__ta-ta lead-catcher__name-input " placeholder="Question" name="ta" data-required cols="30" rows="10"></textarea>
           </div>
           <button type="submit" class="lead-catcher__submit">Call back</button>
         </form>
@@ -51,8 +51,12 @@
       <ul class="header__menu">
         <li class="header__menu-item">
           <a href="#" class="header__menu-link">Первая ссылка</a>
-          <a href="#" class="header__menu-link">Вторая ссылка</a>
-          <a href="#" class="header__menu-link">Третья ссылка</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="#" class="header__menu-link">Первая ссылка</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="#" class="header__menu-link">Первая ссылка</a>
         </li>
       </ul>
     </div>
@@ -84,9 +88,9 @@
     </footer>
   </div>
 
-
-
-  <script src="js/main.min.js"></script>
+  
+  <script src="https://unpkg.com/imask@6.4.2/dist/imask.js"></script>
+  <script src="js/main.min.js" type="module"></script>
 </body>
 
 </html>

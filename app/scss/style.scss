@@ -46,7 +46,9 @@ body {
         font-size: 2.5rem;
     }
 
-
+    &__menu {
+        display: flex;
+    }
     &__menu-link {
         &:hover {
             color: rgba(185, 185, 185, 0.856);
@@ -214,6 +216,17 @@ body {
         font-size: 13px;
         &:hover {
             background: #304ddd;
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .header {
+        &__menu {
+            flex-direction: column;
+        }
+        &__menu-item {
+           font-size: 1.5rem;
         }
     }
 }
