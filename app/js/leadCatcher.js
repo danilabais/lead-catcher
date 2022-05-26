@@ -5,13 +5,29 @@ function startLeadCatcher(secondForStart) {
   const modal = document.querySelector("#modal");
   const modalTrigger = document.querySelector("#modal__trigger");
   const btnModalClose = document.querySelector("#btnModalClose");
+  const formLeadCatcher = document.querySelector("#formLeadCatcher");
   const inputsRequired = document.querySelectorAll("[data-required]");
+
   let onceOpen = false;
   let timerBoolean = false;
 
+  const name = document.querySelector('.lead-catcher__name-input')
+  const tel = document.querySelector('.lead-catcher__tel-input')
+  const ta = document.querySelector('.lead-catcher__ta-ta')
+
+  name.addEventListener('input',((e)=>formData.name= e.target.value))
+  tel.addEventListener('input',((e)=>formData.tel= e.target.value))
+  ta.addEventListener('input',((e)=>formData.ta= e.target.value))
+
+  const formData = {
+      name: name,
+      tel: tel,
+      text: ta,
+  }
   const closeModal = () => {
     modal.classList.toggle("show");
     document.body.classList.remove("overflow-hidden");
+    formLeadCatcher.reset()
   };
   const openModal = () => {
     modal.classList.toggle("show");
@@ -39,14 +55,18 @@ function startLeadCatcher(secondForStart) {
   const  submitForm = async(e) => {
     e.preventDefault();
     if (checkRequired()) {
-        
-
-
-
-
-
-      console.log("Отправлено");
-      closeModal();
+        try {
+            await fetch('http://a0678292.xsph.ru/mailer/sendmail.php', {
+                method: "POST",
+                body: formData
+            }) 
+            console.log(formData);
+            console.log("Отправлено");
+            
+        } catch (error) {
+            console.log(error);
+        }
+        closeModal();
     }
   };
 
